@@ -10,18 +10,11 @@ export function Form() {
     setAddress(event.target.address.value)
   }
 
-  const clearAddress = () => {
-    setAddress()
-  }
-
   return (
     <div>
 
       {address ? (
-        <div>
-          <Faucet address={address} />
-          <p><button onClick={clearAddress} className="btn btn-block btn-large">Back</button></p>
-        </div>
+        <Faucet address={address} />
       ) : (
         <form onSubmit={requestFunds}>
           <label htmlFor="address" className="sr-only">Address</label>

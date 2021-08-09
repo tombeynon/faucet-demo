@@ -34,10 +34,15 @@ export function Faucet(props) {
 
   const txURL = `https://www.mintscan.io/akash/txs/${data.transactionHash}`
 
+  const reload = () => {
+    window.location.reload()
+  }
+
   return (
     <div>
       <p className="text-center">Funds sent</p>
       <p><a href={txURL} target="_blank" rel="noreferrer" className="btn btn-primary btn-large btn-block">View TX</a></p>
+      <p><button onClick={reload} className="btn btn-block btn-large">Back</button></p>
     </div>
   );
 };
