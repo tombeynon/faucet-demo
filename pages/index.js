@@ -1,8 +1,5 @@
-import { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import { useRouter } from 'next/router';
 import { Loading } from '../components/loading';
-import { Error } from '../components/error';
 import { Faucet } from '../components/faucet';
 
 export default function Home() {
@@ -12,15 +9,13 @@ export default function Home() {
     user,
     loginWithRedirect
   } = useAuth0();
-  const { pathname } = useRouter();
 
   if (isLoading) {
     return <Loading />;
   }
 
   return (
-    <div>
-
+    <div className="main container">
       {isAuthenticated ? (
         <div>
           <p className="text-center">Hello, {user.nickname}</p>{' '}

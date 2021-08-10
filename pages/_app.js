@@ -31,7 +31,7 @@ class MyApp extends App {
           />
         </Head>
         <Nav />
-        <div className="main container">
+        <div className="container mt-5">
           <Component {...pageProps} />
         </div>
       </Auth0Provider>

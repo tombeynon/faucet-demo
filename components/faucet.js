@@ -29,8 +29,8 @@ export function Faucet() {
 
   const { loading, error, data } = useApi(
     `${FAUCET_API}`, {
-      audience: process.env.NEXT_PUBLIC_AUDIENCE,
-      scope: '',
+      audience: AUDIENCE,
+      scope: SCOPE,
       headers: {
         'Content-Type': 'application/json'
       }
