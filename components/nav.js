@@ -37,8 +37,8 @@ export function Nav() {
       </Link>
 
       <div className="collapse navbar-collapse">
-        <div className="navbar-nav">
-          {isAuthenticated && permissions.includes('manage:faucet') && (
+        {isAuthenticated && permissions.includes('manage:faucet') && (
+          <div className="navbar-nav">
             <Link href="/transactions">
               <a
                 className={`nav-item nav-link${
@@ -48,8 +48,17 @@ export function Nav() {
                 Transactions
               </a>
             </Link>
-          )}
-        </div>
+            <Link href="/users">
+              <a
+                className={`nav-item nav-link${
+                  pathname === '/users' ? ' active' : ''
+                 }`}
+              >
+                Users
+              </a>
+            </Link>
+          </div>
+        )}
       </div>
 
       {isAuthenticated && (

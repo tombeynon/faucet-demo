@@ -21,3 +21,7 @@ a {
   padding: 15px;
   margin: 0 auto;
 }
+
+table.table td{
+  vertical-align: middle
+}
