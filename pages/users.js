@@ -9,7 +9,7 @@ const FAUCET_API = process.env.FAUCET_API || 'http://localhost:8080';
 const AUDIENCE = process.env.NEXT_PUBLIC_AUDIENCE
 const SCOPE = ''
 
-const Transactions = () => {
+const Users = () => {
   const { loading, error, data: users = [] } = useApi(
     `${FAUCET_API}/users`, {
       audience: AUDIENCE,
@@ -70,4 +70,4 @@ const Transactions = () => {
   );
 };
 
-export default withAuthenticationRequired(Transactions);
+export default withAuthenticationRequired(Users);

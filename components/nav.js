@@ -57,6 +57,15 @@ export function Nav() {
                 Users
               </a>
             </Link>
+            <Link href="/blocked-addresses">
+              <a
+                className={`nav-item nav-link${
+                  pathname === '/blocked-addresses' ? ' active' : ''
+                 }`}
+              >
+                Blocked Addresses
+              </a>
+            </Link>
           </div>
         )}
       </div>
