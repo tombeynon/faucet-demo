@@ -3,7 +3,7 @@ import App from 'next/app';
 import Head from 'next/head';
 import Router from 'next/router';
 import { Auth0Provider } from '@auth0/auth0-react';
-import { Nav } from '../components/Nav';
+import { Nav } from '../components/nav';
 import '../styles/globals.css'
 
 const onRedirectCallback = (appState) => {

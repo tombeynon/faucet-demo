@@ -86,7 +86,6 @@ const BlockedAddresses = () => {
         },
         method: 'DELETE'
       })
-    console.log(error)
     setState({
       error,
       loading: false,

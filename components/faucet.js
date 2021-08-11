@@ -11,13 +11,7 @@ const AUDIENCE = process.env.NEXT_PUBLIC_AUDIENCE
 const SCOPE = ''
 
 export function Faucet() {
-  const {
-    isAuthenticated,
-    isLoading,
-    user,
-    loginWithRedirect,
-    logout,
-    getAccessTokenSilently } = useAuth0();
+  const { getAccessTokenSilently } = useAuth0();
 
   const [state, setState] = useState({
     error: null,
@@ -72,7 +66,7 @@ export function Faucet() {
       data,
       error,
       loading: false,
-      txURL: data.transactionHash && `https://www.mintscan.io/akash/txs/${data.transactionHash}`,
+      txURL: data && data.transactionHash && `https://www.mintscan.io/akash/txs/${data.transactionHash}`,
       lastFunded: !error && Date.now()
     });
   }
