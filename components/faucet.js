@@ -6,7 +6,7 @@ import { Error } from '../components/error';
 import { useApi } from '../hooks/use-api';
 import { callApi } from '../utils'
 
-const FAUCET_API = process.env.FAUCET_API || 'http://localhost:8080';
+const FAUCET_API = process.env.NEXT_PUBLIC_API || 'http://localhost:8080';
 const AUDIENCE = process.env.NEXT_PUBLIC_AUDIENCE
 const SCOPE = ''
 
