@@ -10,6 +10,8 @@ WORKDIR /usr/src/app
 # copy source files
 COPY . /usr/src/app
 
+ENV NODE_ENV=production
+
 # install dependencies
 RUN npm install
 
