@@ -123,6 +123,13 @@ export function Faucet() {
           {renderFaucet()}
         </div>
       )}
+      <hr />
+      {data && (
+        <p>
+          Chain: {data.chainId}<br />
+          Amount: {data.distributionAmount}uakt
+        </p>
+      )}
     </div>
   )
 }

@@ -39,7 +39,7 @@ const Transactions = () => {
         </tr>
       </thead>
       <tbody>
-        {transactions.map(({ user, address, transactionHash, amountUakt, createdAt }, i) => (
+        {transactions.map(({ user, address, transactionHash, amount, createdAt }, i) => (
           <tr key={i}>
             <td>
               <a
@@ -50,7 +50,7 @@ const Transactions = () => {
               >{user.nickname}</a>
             </td>
             <td>{address}</td>
-            <td>{amountUakt}uakt</td>
+            <td>{amount}uakt</td>
             <td>{createdAt}</td>
             <td>
               {transactionHash && (
